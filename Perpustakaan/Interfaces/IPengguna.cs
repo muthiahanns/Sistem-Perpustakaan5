@@ -6,6 +6,6 @@ namespace Perpustakaan.Interfaces
     public interface IPengguna
     {
         void Login(string username, string password);
-        List<Buku> LihatBuku();
+        void LihatBuku(); // Diubah menjadi void sesuai UML
     }
 }
