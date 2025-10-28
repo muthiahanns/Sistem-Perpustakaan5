@@ -17,7 +17,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'  # sesuaikan dengan versi yang kamu pakai
+        dotnet-version: '9.0.306'  # sesuaikan dengan versi yang kamu pakai
 
     - name: Restore dependencies
       run: dotnet restore
