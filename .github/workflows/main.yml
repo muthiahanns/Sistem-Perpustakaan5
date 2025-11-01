@@ -1,3 +1,4 @@
+
 name: .NET CI
 
 on:
@@ -9,21 +10,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
+    - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '9.0.306'  # sesuaikan dengan versi yang kamu pakai
-
+        dotnet-version: 9.0.306
     - name: Restore dependencies
       run: dotnet restore
-
     - name: Build
       run: dotnet build --no-restore --configuration Release
-
-    - name: Run tests
+    - name: Test
       run: dotnet test --no-build --verbosity normal
